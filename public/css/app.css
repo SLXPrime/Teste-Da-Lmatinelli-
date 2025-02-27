@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Estilo padrão (para telas grandes, como desktops) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poly:ital@0;1&display=swap");
 .container {
   width: 80%;
   margin: 0 auto;
@@ -25,7 +26,7 @@
   }
 }
 body {
-  background-color: black;
+  background-color: white;
   padding: 0px;
   margin: 0px;
   font-family: "Poppins";
@@ -53,6 +54,197 @@ body {
   background-color: transparent;
   width: fit-content;
   height: fit-content;
+}
+.btn__Outlined {
+  background-color: transparent;
+  border: 1px solid #3A3D32;
+  padding: 13px 14px;
+  border-radius: 5px;
+}
+.btn__Outlined span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0%;
+  color: #3A3D32;
+  text-transform: uppercase;
+}
+.ArquitetosBanner {
+  width: 100%;
+  background-color: white;
+}
+.ArquitetosBanner > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.ArquitetosBanner > div .info,
+.ArquitetosBanner > div .image {
+  width: 50%;
+  height: 478px;
+}
+.ArquitetosBanner > div .info img,
+.ArquitetosBanner > div .image img {
+  width: 100%;
+  height: 478px;
+}
+.ArquitetosBanner > div .info {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.ArquitetosBanner > div .info h3 {
+  font-family: Poly-;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  color: #3A3D32;
+  margin-top: 0px;
+}
+.ArquitetosBanner > div .info p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  color: rgba(0, 0, 0, 0.5019607843);
+  max-width: 709px;
+}
+@media (min-width: 900px) {
+  .ArquitetosBanner > div > h3 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .ArquitetosBanner > div {
+    flex-direction: column-reverse;
+    padding: 0px 25px;
+    box-sizing: border-box;
+    gap: 0px;
+  }
+  .ArquitetosBanner > div > h3 {
+    font-family: Poly;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: #3A3D32;
+    margin-bottom: 0px;
+  }
+  .ArquitetosBanner > div .info,
+  .ArquitetosBanner > div .image {
+    width: 100%;
+    height: 240px;
+  }
+  .ArquitetosBanner > div .info img,
+  .ArquitetosBanner > div .image img {
+    height: 240px;
+  }
+  .ArquitetosBanner > div .info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+  .ArquitetosBanner > div .info h3 {
+    display: none;
+  }
+  .ArquitetosBanner > div .info p {
+    margin-top: 55px;
+  }
+  .ArquitetosBanner > div .image img {
+    width: 100%;
+  }
+}
+.SobreNosBanner {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.031372549);
+}
+.SobreNosBanner > div {
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+.SobreNosBanner > div .info,
+.SobreNosBanner > div .image {
+  width: 850px;
+}
+.SobreNosBanner > div .info img,
+.SobreNosBanner > div .image img {
+  width: 100%;
+}
+.SobreNosBanner > div .info h3 {
+  font-family: Poly-;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  color: #3A3D32;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.SobreNosBanner > div .info p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  color: rgba(0, 0, 0, 0.5019607843);
+  max-width: 709px;
+}
+@media (min-width: 900px) {
+  .SobreNosBanner > div > h3 {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .SobreNosBanner > div {
+    flex-direction: column;
+    padding: 0px 25px;
+    box-sizing: border-box;
+  }
+  .SobreNosBanner > div > h3 {
+    font-family: Poly;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 35px;
+    letter-spacing: 0%;
+    color: #3A3D32;
+    margin-bottom: 0px;
+  }
+  .SobreNosBanner > div .info,
+  .SobreNosBanner > div .image {
+    width: 100%;
+  }
+  .SobreNosBanner > div .info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+  }
+  .SobreNosBanner > div .info h3 {
+    display: none;
+  }
+  .SobreNosBanner > div .image img {
+    width: 100%;
+  }
+}
+@media (max-width: 769px) {
+  .SobreNosBanner {
+    position: relative;
+    top: 90px;
+    padding-bottom: 45px;
+  }
+  .SobreNosBanner > div {
+    gap: 20px;
+  }
 }
 footer {
   background-color: #FFFFFF;
@@ -143,6 +335,8 @@ footer > div .contactContainer .ContactList > div div {
   footer > div {
     flex-direction: column;
     align-items: center;
+    position: relative;
+    top: 80px;
   }
   footer > div .Description {
     flex-direction: column;
@@ -154,7 +348,7 @@ footer > div .contactContainer .ContactList > div div {
   }
   footer > div .contactContainer {
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     border-top: 1px solid rgba(0, 0, 0, 0.5019607843);
     padding: 20px 0px;
     margin-top: 20px;

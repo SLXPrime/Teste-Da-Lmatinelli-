@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
-
+use App\Http\Controllers\HomeSettingsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +21,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+    Route::get('home-settings', [HomeSettingsController::class, 'index'])->name('voyager.home-settings');
+    Route::post('home-settings', [HomeSettingsController::class, 'update'])->name('voyager.home-settings.update');
 });
+
+
+
