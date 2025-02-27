@@ -1,0 +1,75 @@
+header {
+    background-color: #3A3D32F2;
+
+    >div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+
+        @media (min-width:900px) {
+            .MobileSearchButton {
+                display: none;
+            }
+        }
+
+        @media (max-width:768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            padding: 10px;
+            max-width: 95vw;
+            padding-left: 45px;
+            box-sizing: border-box;
+
+        }
+
+        .LogoContainer {
+            width: 265px;
+            height: 50px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width:768px){
+                width: 173px;
+                height: 38px;
+            }
+        }
+
+        .Utils {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            a {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 15.6px;
+                letter-spacing: 0%;
+                color: white;
+                text-decoration: none;
+            }
+
+            @media(max-width:768px) {
+                a {
+                    display: none;
+                }
+
+                button {
+                    &:first-of-type {
+                        display: none;
+                    }
+
+                    position: absolute;
+                    left: 15px;
+                }
+            }
+        }
+    }
+}
