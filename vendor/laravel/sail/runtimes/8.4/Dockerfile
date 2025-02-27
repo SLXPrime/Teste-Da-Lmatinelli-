@@ -16,6 +16,9 @@ ENV SUPERVISOR_PHP_USER="sail"
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+# Troca o repositório de Ubuntu para o mais rápido (Brasil)
+RUN sed -i 's|http://archive.ubuntu.com/ubuntu|http://br.archive.ubuntu.com/ubuntu|g' /etc/apt/sources.list
+
 RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
     echo "Acquire::http::No-Cache true;" >> /etc/apt/apt.conf.d/99custom && \
     echo "Acquire::BrokenProxy    true;" >> /etc/apt/apt.conf.d/99custom
